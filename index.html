@@ -301,27 +301,33 @@
                     </div>
                 </div>
                 <div class="col-md-6 pt-3" data-aos="fade-left" data-aos-offset="400" data-aos-duration="1500">
-                    <form action="#">
+                    <form name="visitor-contact-form">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="yourname" class="form-label">Your Name</label>
-                                    <input type="text" class="form-control" id="yourname">
+                                    <input type="text" class="form-control" id="yourname" name="name">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="youremail" class="form-label">Your Email</label>
-                                    <input type="email" class="form-control" id="youremail"
-                                        aria-describedby="emailHelp">
+                                    <input type="email" class="form-control" id="youremail" aria-describedby="emailHelp"
+                                        name="email">
                                 </div>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="yourmessage" class="form-label">Your Message</label>
-                            <textarea class="form-control" name="message" id="yourmessage" rows="6"></textarea>
+                            <textarea class="form-control" name="message" id="yourmessage" rows="6"
+                                name="message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary float-end">Send Message</button>
+                        <div class="alert alert-success alert-dismissible fade show d-none alert-form" role="alert">
+                            <strong>Pesan telah dikirim!</strong> Terima Kasih.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <button type="reset" class="btn btn-danger float-end">Reset Form</button>
+                        <button type="submit" class="btn btn-primary me-3 float-end btn-kirim">Send Message</button>
                     </form>
                 </div>
             </div>

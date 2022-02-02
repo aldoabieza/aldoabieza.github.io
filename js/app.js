@@ -1,4 +1,23 @@
 AOS.init();
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwdyr62TMz6k0r6q8H7fUI-bclhB0iTYvJy9RZcmvPbvX8VW-8p_UVGNcXBqTF3I_ck/exec';
+const form = document.forms['visitor-contact-form'];
+const alertSuccess = document.querySelector('.alert-form');
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            alertSuccess.classList.toggle('d-none');
+            console.log('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
+});
+
+
+
+
+
+
 
 let btn = $("#back-top");
 // Parallax effect
